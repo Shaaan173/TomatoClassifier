@@ -17,7 +17,7 @@ def prepare_image(img):
 
 def classify_tomato(img):
     img = prepare_image(img)
-    prediction = model.predict(img)
+    prediction = model.predict(img)               
     if prediction[0] < 0.2:
         return "Premium"
     elif prediction[0] > 0.5:
